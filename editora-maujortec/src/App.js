@@ -40,7 +40,6 @@ function App() {
   return (
     <>
       
-      
       <BrowserRouter>
       <Topo />
         <Routes>
@@ -49,7 +48,6 @@ function App() {
           <Route path="/programacao" element={<Programacao livros={livros}/>} />
           <Route path="/design" element={<Design livros={livros}/>} />
           <Route path="/catalogo" element={<Catalogo livros={livros}/>} />
-          <Route path="/livro/redacao-estrategica-para-ux" element={<Livro livro={livros[0]}/> } />
           <Route path="/livro/:livroSlug" element={props => {
             const livro = livros.find(
               livro => livro.slug === props.match.params.livroSlug);
